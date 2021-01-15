@@ -127,13 +127,17 @@ if(isset($_GET['Preguntas'])){
 Si se quieren vallar las lindes de las tres parcelas (los bordes y las separaciones de las parcelas), determina 
 las dimensiones del solar para que la longitud de la valla utilizada sea mínima</h2>
 <form>
-lado x <input placeholder="lado x" 
-	value="53.33" id="x" name="lado x" onkeyup="calcular4()"/>
-lado y <input placeholder="lado y"
-	value="80"/ id="y" name="lado y" onkeyup="calcular4()">
+Area m2 <input placeholder="Area" 
+	value="12800" id="a" name="a" onkeyup="calcular4()"/>
+
 <button onclick="calcular4()">Calcular</button>
 </form>
-<div id="superficie solar" style="
+<div id="largo" style="
+	padding:20px;
+	background-color:pink;
+">
+</div>
+<div id="ancho" style="
 	padding:20px;
 	background-color:pink;
 ">
@@ -142,18 +146,24 @@ Resultado
 
 <script>
 function calcular4(){
-	x=document.getElementById('x').value;
-	y=document.getElementById('y').value;
-	superficie solar=(sqrt((2*x*y)/9))*((x*y)/(3*x));
-	document.getElementById('superficie solar').innerHTML=superficie solar+' m2';
+	a=document.getElementById('a').value;
+	x=Math.sqrt((2*a)/9);
+	x=Math.round(x*100)/100;
+	ancho=a/(x*3);
+	ancho=Math.round(ancho*100)/100;
+	document.getElementById('largo').
+	innerHTML=x+' m de ancho (y)';
+	document.getElementById('ancho').
+	innerHTML=ancho+' m de largo (x)';
 }
-calcular();
+calcular4();
 </script>
 
 <?php
-if(isset($_GET['x'])){
-	$x = $_GET['x'];
-	$y = $_GET['y'];
-	echo 'superficie solar: '.(($sqrt((2*$x*$y)/9))*(($x*$y)/(3*$x)));
+if(isset($_GET['a'])){
+	$a = $_GET['a'];
+
+	echo 'Ancho (y): '.(round(sqrt((($a*2)/9)),2));
+	echo 'Largo (x): '.($a/(((sqrt(($a*2)/9)))*3));
 }
 ?>
