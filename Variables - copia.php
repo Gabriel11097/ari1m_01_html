@@ -1,5 +1,5 @@
 <h1>Problemas</h1>
-
+<image heigth=20% src= "imagenes/Captura3.PNG">
 <h2>Las pelotas de tenis se envasan en tubos cilíndricos que contienen tres pelotas.Sabiendo que cada pelota tiene un diametro de 8cm,calcula la longitud del cilindro.</h2>
 <form>
 Pelotas<input placeholder="Pelotas" 
@@ -34,7 +34,7 @@ if(isset($_GET['Pelotas'])){
 	echo 'longitud :'.($Pelotas*$Diametro); 
 }
 ?>
-
+<image heigth=20% src= "imagenes/Captura.PNG">
 <h2>Halla el área de un rectángulo cuya diagonal mide 10cm y uno de sus lados 6cm.</h2>
 <form>
  Diagonal<input placeholder="Diagonal" 
@@ -121,7 +121,7 @@ if(isset($_GET['Preguntas'])){
 }
 ?>
 
-
+<image heigth=20% src= "imagenes/Captura2.PNG">
 
 <h2>Se desea vender un solar rectangular de 12.800 m2 dividiéndolo en tres parcelas rectangulares iguales. 
 Si se quieren vallar las lindes de las tres parcelas (los bordes y las separaciones de las parcelas), determina 
