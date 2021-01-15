@@ -8,8 +8,6 @@ R<input placeholder="resistencia" value="1" name ="r" id="r" onkeyup="calcular()
 </form>
 <div id="i" style="padding:20px; background-color:pink"> Resultado</div>
 <script>
-//alert("hola mundo");
-//console.log("hola otra vez");
 function calcular(){
 v=document.getElementById("v").value;
 r=document.getElementById("r").value;
