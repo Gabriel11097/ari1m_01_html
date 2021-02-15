@@ -1,3 +1,6 @@
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
+</head>
 <center><h1><u>Ejercicio 1</u></h1></center>
 <center><h2><i>Almacena en un array la tabla de multiplicar del 6 y muestra el contenido del array</i></h2></center>
 <pre>
